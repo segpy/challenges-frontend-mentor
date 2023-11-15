@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --pale-blue:
+    hsl(225, 100%, 94%);
+    --bright-blue:
+    hsl(245, 75%, 52%);
+    --very-pale-blue:
+    hsl(225, 100%, 98%);
+    --desaturated-blue:
+    hsl(224, 23%, 55%);
+    --dark-blue:
+    hsl(223, 47%, 23%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+}
+
+img {
+    max-width: 100;
+}
+
+body{
+    padding: 16px 25px;
+    font-family: "Red Hat Display", sans-serif ;
+    background-color: var(--pale-blue);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--desaturated-blue)
+}
+
+button {
+    font-family: inherit;
+}
+
+.bg__image {
+    background: url(/images/pattern-background-mobile.svg) no-repeat center/cover;
+    height: 400px;
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.btn-change{
+    background-color: transparent;
+    color: var(--bright-blue);
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--bright-blue);
+    color:hsl(225, 100%, 98%);
+    padding: 10px;
+    width: 90%;
+    height: 50px;
+    margin-bottom: 15px;
+    box-shadow: 1px 15px 10px hsl(224, 51%, 19%, 0.3);
+}
+
+.btn-primary:hover, .btn-change:hover {
+    opacity: 0.8;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--desaturated-blue);
+}
+
+.btn-secondary:hover{
+    color: hsl(223, 47%, 23%);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 25.125rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 2px 4px 10px hsl(224, 23%, 55%, 0.9);
+}
+
+.card img.hero {
+    width: 100%;
+}
+
+.container {
+    background-color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+
+.container div.pricing{
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--very-pale-blue);
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.container div.pricing article.articleItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+.container div.pricing article.articleItem img{
+    margin-right: 5px ;
+}
+
+.container div.pricing article.articleItem div{
+    margin-left: 10px;
+}
+
+.container h1 {
+    color: hsl(224, 51%, 19%);
+}
+.container p#container-p{
+    margin: 10px auto;
+
+}
+
+@media screen and (max-width:766px) {
+    .container h1{
+        font-size: 1.35rem;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .container div.pricing article.articleItem{
+        margin-left: -1px;
+    }
+    .container div.pricing article.articleItem img{
+        margin:0;
+    } 
+    .articleItem div.details{
+        margin:0;
+    }
+
+    .container div.pricing{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 767px) {
+    .bg__image{
+        background: url('/images/pattern-background-desktop.svg') no-repeat center/cover;
+        height: 50vh;
+    }
+    .container h1{
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+    .container div.pricing{
+        padding: 16px;
+    }
+}
+
+@media screen and (min-width: 89.9375em){
+    .card {
+        max-width: 28.125rem;
+    }
+    .container{
+        padding: 2.5rem 2.95rem 2.95rem 2.95rem;
+    }
+    .container h1{
+        font-size: 1.75rem;
+        margin: 0;
+    }
+    .container p#container-p{
+        margin: 18px 0;
+    }
+    .container div.pricing{
+        padding: 24px;
+        margin: 0 auto;
+    }
+    .btn-primary{
+        margin: 30px 0;
+    }
+}
+
+@media screen and (min-width: 36em) and (min-height: 50em) {
+    .attribution {
+        position: fixed;
+        bottom: 0.325rem;
+    }
+}
+
+.attribution {
+    margin-block: 0.5rem;
+    font-size: 0.735rem;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(245deg, 75%, 52%);
+}

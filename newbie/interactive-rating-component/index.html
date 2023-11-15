@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="card-rate">
+      <div class="star-img">
+        <img src="/images/icon-star.svg" alt="icon-star">
+      </div>
+        <div class="rate-text">
+          <h1 class="title">How did we do?
+          </h1>
+          <p class="description">Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!</p>
+        </div>
+        <div class="options">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+        </div>
+        <button id="submit-btn" class="btn btn-primary" type="submit">Submit</button>
+    </div>
+
+
+    <div class="card-thanks hidden">
+      <div class="thanks-img">
+        <img src="/images/illustration-thank-you.svg" alt="thank-illustration">
+      </div>
+      <div class="selected-rate">
+        <p>
+          You selected <span id="rate"></span> out of 5
+        </p>
+      </div>
+      <h1 class="title">
+        Thank you!
+      </h1>
+      <p class="description">
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch! 
+      </p>
+    </div>
+  </main>
+
+  <div class="attribution">
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Sebastian Gomez @segpy</a>.
+
+    </p>
+  </div>
+  <script src="/index.js"></script>
+</body>
+</html>
